@@ -16,6 +16,6 @@ java -XX:+UseParallelOldGC   -cp target/tests-memory.jar pl.kordulewski.memory.r
 java -XX:+UseConcMarkSweepGC -cp target/tests-memory.jar pl.kordulewski.memory.runners.OutOfMemoryErrorNativeHeapRunner
 java -XX:+UseG1GC            -cp target/tests-memory.jar pl.kordulewski.memory.runners.OutOfMemoryErrorNativeHeapRunner
 
-nie mają wpływu na test:
+### Alternative flags
 java -XX:+AggressiveHeap     -cp target/tests-memory.jar pl.kordulewski.memory.runners.OutOfMemoryErrorNativeHeapRunner
 java -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -cp target/tests-memory.jar pl.kordulewski.memory.runners.OutOfMemoryErrorNativeHeapRunner
