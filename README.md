@@ -1,14 +1,14 @@
 # Java memory leaks
 
 
-## Budowa i uruchomienie
+## Building and running
 ```
 mvn install
 java -jar target/memory-leaks.jar
 ```
 
 
-## Uruchomienie z różnymi garbage collectorami
+## Running with different garbage collectors
 
 java -XX:+UseSerialGC        -cp target/tests-memory.jar pl.kordulewski.memory.runners.OutOfMemoryErrorNativeHeapRunner
 java -XX:+UseParallelGC      -cp target/tests-memory.jar pl.kordulewski.memory.runners.OutOfMemoryErrorNativeHeapRunner
