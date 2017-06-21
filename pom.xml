@@ -15,6 +15,7 @@
         <configuration>
           <archive>
             <manifest>
+              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
               <mainClass>pl.kordulewski.memory.leaks.MainClass</mainClass>
             </manifest>
           </archive>
