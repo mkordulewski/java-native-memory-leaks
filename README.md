@@ -1,6 +1,16 @@
 # Java native memory leaks
 
 
+## Summary
+| Garbage Collector              |flag                     | HotSpot 6  | HotSpot 8  | HotSpot 9 | 
+|:-------------------------------|:-----------------------:|:----------:|:----------:|:---------:|
+| Serial GC                      | -XX:+UseSerialGC        |            |            |           | 
+| Parallel GC                    | -XX:+UseParallelGC      |            |            |           | 
+| Old Parallel GC                | -XX:+UseParallelOldGC   |            |            |           | 
+| CMS (Concurrent Mark Sweep) GC | -XX:+UseConcMarkSweepGC |            |            |           | 
+| G1 (Garbage First) GC          | -XX:+UseG1GC            |            |            |           | 
+
+
 ## Building and running
 ```
 mvn install
