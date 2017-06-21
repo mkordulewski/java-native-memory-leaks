@@ -1,4 +1,4 @@
-# Java memory leaks
+# Java native memory leaks
 
 
 ## Building and running
