@@ -1,1 +1,3 @@
 Plik jar zawiera przykłady dużej alokacji oraz wycieków różnych obszarów pamięci w Javie.
+
+Autor: Michał Kordulewski
