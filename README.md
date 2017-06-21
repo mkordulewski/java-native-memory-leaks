@@ -10,6 +10,10 @@
 | CMS (Concurrent Mark Sweep) GC | -XX:+UseConcMarkSweepGC |            |            |           | 
 | G1 (Garbage First) GC          | -XX:+UseG1GC            |            |            |           | 
 
+G1 GC was called with flags:
+* HotSpot 8,9: ```-XX:+UseG1GC```
+* HotSpot 6:   ```-XX:+UseG1GC -XX:+UnlockExperimentalVMOptions```
+
 
 ## Building and running
 ```
