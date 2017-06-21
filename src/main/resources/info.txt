@@ -1,3 +1,7 @@
 Plik jar zawiera przykłady dużej alokacji oraz wycieków różnych obszarów pamięci w Javie.
 
 Autor: Michał Kordulewski
+
+UWAGA: Uruchomienie niektórych klas może być obciążające dla systemu operacyjnego. Dotyczy to testów podatności na
+wycieki pamięci. Używaj ich ostrożnie. Nie wykonuj ich na systemie wspóldzielonym. W czasie trwania testu możesz utracić
+zdolność systemu do reagowania na działania użytkownika, szczególnie w powłokach graficznych, aż do czasu zakończenia testu i zwrócenia sterowania.
