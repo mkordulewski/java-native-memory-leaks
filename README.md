@@ -3,7 +3,7 @@
 
 ## Summary
 | Garbage Collector              |flag                     | HotSpot 6  | HotSpot 8  | HotSpot 9 | 
-|:-------------------------------|:-----------------------:|:----------:|:----------:|:---------:|
+|:-------------------------------|:------------------------|:----------:|:----------:|:---------:|
 | Serial GC                      | -XX:+UseSerialGC        |            |            |           | 
 | Parallel GC                    | -XX:+UseParallelGC      |            |            |           | 
 | Old Parallel GC                | -XX:+UseParallelOldGC   |            |            |           | 
