@@ -23,6 +23,7 @@ java -jar target/memory-leaks.jar
 
 
 ## Running with different garbage collectors
+Testing memory leak in native heap - **WARNING, it really cause memory leak** (except G1 GC with HotSpot 8):
 ```
 java -XX:+UseSerialGC        -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapRunner
 java -XX:+UseParallelGC      -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapRunner
@@ -31,6 +32,7 @@ java -XX:+UseConcMarkSweepGC -cp target/memory-leaks.jar pl.kordulewski.memory.l
 java -XX:+UseG1GC            -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapRunner
 ```
 
+Testing memory leak in native heap when GC is called periodically - it's safe, no memory leak:
 ```
 java -XX:+UseSerialGC        -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithCollectingRunner
 java -XX:+UseParallelGC      -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithCollectingRunner
@@ -39,6 +41,7 @@ java -XX:+UseConcMarkSweepGC -cp target/memory-leaks.jar pl.kordulewski.memory.l
 java -XX:+UseG1GC            -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithCollectingRunner
 ```
 
+Testing memory leak in native heap when objects intentionally litter Java heap - it's safe, no memory leak:
 ```
 java -XX:+UseSerialGC        -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithLitteringRunner
 java -XX:+UseParallelGC      -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithLitteringRunner
