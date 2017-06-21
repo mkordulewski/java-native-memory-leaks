@@ -2,6 +2,11 @@
 
 Testing native heap memory leaks caused by native method ```java.util.zip.Inflater.init(boolean)```.
 
+refs:
+* http://bugs.java.com/view_bug.do?bug_id=4797189
+* http://bugs.java.com/view_bug.do?bug_id=6751792
+
+
 ## Summary
 | Garbage Collector              |flag                     | HotSpot 6 @ Windows 7 x64 | HotSpot 8 @ Windows 7 x64 | HotSpot 8 @ Solaris 11 |
 |:-------------------------------|:------------------------|:-------------------------:|:-------------------------:|:----------------------:|
