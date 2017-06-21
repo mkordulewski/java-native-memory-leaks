@@ -2,13 +2,17 @@
 
 
 ## Summary
-| Garbage Collector              |flag                     | HotSpot 6  | HotSpot 8  | HotSpot 9 | 
-|:-------------------------------|:------------------------|:----------:|:----------:|:---------:|
-| Serial GC                      | -XX:+UseSerialGC        |    leak    |    leak    |           | 
-| Parallel GC                    | -XX:+UseParallelGC      |    leak    |    leak    |           | 
-| Old Parallel GC                | -XX:+UseParallelOldGC   |    leak    |    leak    |           | 
-| CMS (Concurrent Mark Sweep) GC | -XX:+UseConcMarkSweepGC |    leak    |    leak    |           | 
-| G1 (Garbage First) GC          | -XX:+UseG1GC            |    leak    |**no leak** |           | 
+| Garbage Collector              |flag                     | HotSpot 6 @ Windows 7 x64 | HotSpot 8 @ Windows 7 x64 | HotSpot 8 @ Solaris 11 |  
+|:-------------------------------|:------------------------|:-------------------------:|:-------------------------:|:----------------------:|
+| Serial GC                      | -XX:+UseSerialGC        |          leak (1)         |         leak (1)          |        leak (2)        | 
+| Parallel GC                    | -XX:+UseParallelGC      |          leak (1)         |         leak (1)          |        leak (2)        | 
+| Old Parallel GC                | -XX:+UseParallelOldGC   |          leak (1)         |         leak (1)          |        leak (2)        | 
+| CMS (Concurrent Mark Sweep) GC | -XX:+UseConcMarkSweepGC |          leak (1)         |         leak (1)          |        leak (2)        | 
+| G1 (Garbage First) GC          | -XX:+UseG1GC            |          leak (1)         |       **no leak**         |        leak (2)        | 
+
+Table legend:
+* leak (1) - used whole OS memory, OutOfMemoryError
+* leak (2) - used part of OS memory, OutOfMemoryError or Exception
 
 G1 GC was called with flags:
 * HotSpot 8,9: ```-XX:+UseG1GC```
