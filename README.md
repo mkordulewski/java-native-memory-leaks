@@ -4,11 +4,11 @@
 ## Summary
 | Garbage Collector              |flag                     | HotSpot 6  | HotSpot 8  | HotSpot 9 | 
 |:-------------------------------|:------------------------|:----------:|:----------:|:---------:|
-| Serial GC                      | -XX:+UseSerialGC        |            |            |           | 
-| Parallel GC                    | -XX:+UseParallelGC      |            |            |           | 
-| Old Parallel GC                | -XX:+UseParallelOldGC   |            |            |           | 
-| CMS (Concurrent Mark Sweep) GC | -XX:+UseConcMarkSweepGC |            |            |           | 
-| G1 (Garbage First) GC          | -XX:+UseG1GC            |            |            |           | 
+| Serial GC                      | -XX:+UseSerialGC        |    leak    |    leak    |           | 
+| Parallel GC                    | -XX:+UseParallelGC      |    leak    |    leak    |           | 
+| Old Parallel GC                | -XX:+UseParallelOldGC   |    leak    |    leak    |           | 
+| CMS (Concurrent Mark Sweep) GC | -XX:+UseConcMarkSweepGC |    leak    |    leak    |           | 
+| G1 (Garbage First) GC          | -XX:+UseG1GC            |    leak    |**no leak** |           | 
 
 G1 GC was called with flags:
 * HotSpot 8,9: ```-XX:+UseG1GC```
