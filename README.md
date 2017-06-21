@@ -1,5 +1,6 @@
 # Java native memory leaks
 
+Testing native heap memory leaks caused by native method ```java.util.zip.Inflater.init(boolean)```.
 
 ## Summary
 | Garbage Collector              |flag                     | HotSpot 6 @ Windows 7 x64 | HotSpot 8 @ Windows 7 x64 | HotSpot 8 @ Solaris 11 |  
