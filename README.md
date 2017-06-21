@@ -60,3 +60,18 @@ java -XX:+UseG1GC            -cp target/memory-leaks.jar pl.kordulewski.memory.l
 java -XX:+AggressiveHeap     -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapRunner
 java -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapRunner
 ```
+
+
+## Error messages
+
+Windows 7 x64, OpenSuse 42 (x64), Solaris 11 (x63):
+```
+java.lang.OutOfMemoryError
+    at java.util.zip.Inflater.init(Native Method)
+```
+
+Solaris 11 (x64):
+```
+Exception in thread "main" #
+# There is insufficient memory for the Java Runtime Environment to continue.
+```
