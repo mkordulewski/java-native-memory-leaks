@@ -3,13 +3,13 @@
 Testing native heap memory leaks caused by native method ```java.util.zip.Inflater.init(boolean)```.
 
 ## Summary
-| Garbage Collector              |flag                     | HotSpot 6 @ Windows 7 x64 | HotSpot 8 @ Windows 7 x64 | HotSpot 8 @ Solaris 11 |  
+| Garbage Collector              |flag                     | HotSpot 6 @ Windows 7 x64 | HotSpot 8 @ Windows 7 x64 | HotSpot 8 @ Solaris 11 |
 |:-------------------------------|:------------------------|:-------------------------:|:-------------------------:|:----------------------:|
-| Serial GC                      | -XX:+UseSerialGC        |          leak (1)         |         leak (1)          |        leak (2)        | 
-| Parallel GC                    | -XX:+UseParallelGC      |          leak (1)         |         leak (1)          |        leak (2)        | 
-| Old Parallel GC                | -XX:+UseParallelOldGC   |          leak (1)         |         leak (1)          |        leak (2)        | 
-| CMS (Concurrent Mark Sweep) GC | -XX:+UseConcMarkSweepGC |          leak (1)         |         leak (1)          |        leak (2)        | 
-| G1 (Garbage First) GC          | -XX:+UseG1GC            |          leak (1)         |       **no leak**         |        leak (2)        | 
+| Serial GC                      | -XX:+UseSerialGC        |          leak (1)         |         leak (1)          |        leak (2)        |
+| Parallel GC                    | -XX:+UseParallelGC      |          leak (1)         |         leak (1)          |        leak (2)        |
+| Old Parallel GC                | -XX:+UseParallelOldGC   |          leak (1)         |         leak (1)          |        leak (2)        |
+| CMS (Concurrent Mark Sweep) GC | -XX:+UseConcMarkSweepGC |          leak (1)         |         leak (1)          |        leak (2)        |
+| G1 (Garbage First) GC          | -XX:+UseG1GC            |          leak (1)         |       **no leak**         |        leak (2)        |
 
 Table legend:
 * leak (1) - used whole OS memory, OutOfMemoryError
