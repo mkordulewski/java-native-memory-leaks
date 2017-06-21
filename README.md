@@ -24,32 +24,32 @@ java -jar target/memory-leaks.jar
 
 ## Running with different garbage collectors
 ```
-java -XX:+UseSerialGC        -cp target/tests-memory.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapRunner
-java -XX:+UseParallelGC      -cp target/tests-memory.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapRunner
-java -XX:+UseParallelOldGC   -cp target/tests-memory.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapRunner
-java -XX:+UseConcMarkSweepGC -cp target/tests-memory.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapRunner
-java -XX:+UseG1GC            -cp target/tests-memory.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapRunner
+java -XX:+UseSerialGC        -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapRunner
+java -XX:+UseParallelGC      -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapRunner
+java -XX:+UseParallelOldGC   -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapRunner
+java -XX:+UseConcMarkSweepGC -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapRunner
+java -XX:+UseG1GC            -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapRunner
 ```
 
 ```
-java -XX:+UseSerialGC        -cp target/tests-memory.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithCollectingRunner
-java -XX:+UseParallelGC      -cp target/tests-memory.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithCollectingRunner
-java -XX:+UseParallelOldGC   -cp target/tests-memory.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithCollectingRunner
-java -XX:+UseConcMarkSweepGC -cp target/tests-memory.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithCollectingRunner
-java -XX:+UseG1GC            -cp target/tests-memory.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithCollectingRunner
+java -XX:+UseSerialGC        -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithCollectingRunner
+java -XX:+UseParallelGC      -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithCollectingRunner
+java -XX:+UseParallelOldGC   -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithCollectingRunner
+java -XX:+UseConcMarkSweepGC -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithCollectingRunner
+java -XX:+UseG1GC            -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithCollectingRunner
 ```
 
 ```
-java -XX:+UseSerialGC        -cp target/tests-memory.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithLitteringRunner
-java -XX:+UseParallelGC      -cp target/tests-memory.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithLitteringRunner
-java -XX:+UseParallelOldGC   -cp target/tests-memory.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithLitteringRunner
-java -XX:+UseConcMarkSweepGC -cp target/tests-memory.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithLitteringRunner
-java -XX:+UseG1GC            -cp target/tests-memory.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithLitteringRunner
+java -XX:+UseSerialGC        -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithLitteringRunner
+java -XX:+UseParallelGC      -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithLitteringRunner
+java -XX:+UseParallelOldGC   -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithLitteringRunner
+java -XX:+UseConcMarkSweepGC -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithLitteringRunner
+java -XX:+UseG1GC            -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithLitteringRunner
 ```
 
 
 ### Alternative flags
 ```
-java -XX:+AggressiveHeap     -cp target/tests-memory.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapRunner
-java -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -cp target/tests-memory.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapRunner
+java -XX:+AggressiveHeap     -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapRunner
+java -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapRunner
 ```
