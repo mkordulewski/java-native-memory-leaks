@@ -17,13 +17,13 @@ java -jar target/memory-leaks.jar
 
 
 ## Testing memory utilisation with Inflater class
-| Garbage Collector              | HotSpot 6 @ Windows 7 x64 | HotSpot 8 @ Windows 7 x64 | HotSpot 6 @ OpenSuse 42.2 | HotSpot 8 @ Solaris 11 |
-|:-------------------------------|:-------------------------:|:-------------------------:|:-------------------------:|:----------------------:|
-| Serial GC                      |          leak (1)         |         leak (1)          |          leak (1)         |        leak (2)        |
-| Parallel GC                    |          leak (1)         |         leak (1)          |          leak (1)         |        leak (2)        |
-| Old Parallel GC                |          leak (1)         |         leak (1)          |          leak (1)         |        leak (2)        |
-| CMS (Concurrent Mark Sweep) GC |          leak (1)         |         leak (1)          |          leak (1)         |        leak (2)        |
-| G1 (Garbage First) GC          |          leak (1)         |       **no leak**         |          leak (1)         |        leak (2)        |
+| Garbage Collector              | Java 6 @ Windows | Java 8 @ Windows | Java 6 @ Linux | Java 8 @ Solaris |
+|:-------------------------------|:----------------:|:----------------:|:--------------:|:----------------:|
+| Serial GC                      |     leak (1)     |     leak (1)     |    leak (1)    |     leak (2)     |
+| Parallel GC                    |     leak (1)     |     leak (1)     |    leak (1)    |     leak (2)     |
+| Old Parallel GC                |     leak (1)     |     leak (1)     |    leak (1)    |     leak (2)     |
+| CMS (Concurrent Mark Sweep) GC |     leak (1)     |     leak (1)     |    leak (1)    |     leak (2)     |
+| G1 (Garbage First) GC          |     leak (1)     |   **no leak**    |    leak (1)    |     leak (2)     |
 
 Table legend:
 * leak (1) - used whole OS memory, OutOfMemoryError
