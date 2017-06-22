@@ -11,8 +11,8 @@ public class OutOfMemoryErrorNativeHeapRunner {
 
     public static void main (String... args) {
         System.out.println("START");
+        System.out.println("... wait");
         new OutOfMemoryErrorNativeHeapGenerator().run();
-        System.out.println("END");
     }
     
 }

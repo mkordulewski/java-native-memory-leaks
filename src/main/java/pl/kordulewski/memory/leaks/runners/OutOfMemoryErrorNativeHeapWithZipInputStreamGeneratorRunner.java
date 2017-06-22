@@ -11,8 +11,8 @@ public class OutOfMemoryErrorNativeHeapWithZipInputStreamGeneratorRunner {
 
     public static void main (String... args) {
         System.out.println("START");
+        System.out.println("... wait");
         new OutOfMemoryErrorNativeHeapWithZipInputStreamGenerator().run();
-        System.out.println("END");
     }
     
 }

@@ -11,8 +11,8 @@ public class OutOfMemoryErrorNativeHeapWithLitteringRunner {
 
     public static void main (String... args) {
         System.out.println("START");
+        System.out.println("... wait");
         new OutOfMemoryErrorNativeHeapWithLitteringTester().run();
-        System.out.println("END");
     }
     
 }
