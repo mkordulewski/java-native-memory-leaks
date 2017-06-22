@@ -26,8 +26,8 @@ java -jar target/memory-leaks.jar
 | G1 (Garbage First) GC          |     leak (1)     |   **no leak**    |    leak (1)    |    leak (1)    |     leak (2)     |
 
 Table legend:
-* leak (1) - used whole OS memory, OutOfMemoryError
-* leak (2) - used part of OS memory, OutOfMemoryError or Exception
+* leak (1) - whole OS memory allocated, OutOfMemoryError
+* leak (2) - part of OS memory allocated, OutOfMemoryError or Exception
 
 See 'Error messages' section.
 
