@@ -110,9 +110,9 @@ Exception in thread "main" #
 | Java 6 @ Linux   | HotSpot | 1.6.0_45        | OpenSuse 42.2 |      x64      |
 | Java 7 @ Linux   | HotSpot | 1.7.0_79        | OpenSuse 42.2 |      x64      |
 | Java 8 @ Linux   | HotSpot | 1.8.0_131       | OpenSuse 42.2 |      x64      |
-| Java 6 @ Windows | HotSpot |                 | Windows 7     |      x64      |
-| Java 7 @ Windows | HotSpot |                 | Windows 7     |      x64      |
-| Java 8 @ Windows | HotSpot |                 | Windows 7     |      x64      |
+| Java 6 @ Windows | HotSpot | 1.6.0_45        | Windows 7     |      x64      |
+| Java 7 @ Windows | HotSpot | 1.7.0_79        | Windows 7     |      x64      |
+| Java 8 @ Windows | HotSpot | 1.8.0_45        | Windows 7     |      x64      |
 | Java 8 @ Solaris | HotSpot |                 | Solaris 11    |      x64      |
 
 
