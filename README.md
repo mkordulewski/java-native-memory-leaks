@@ -105,11 +105,11 @@ Exception in thread "main" #
 
 ## Used JVMs
 
-| description               | version   |
-|:--------------------------|:----------|
-| HotSpot 6 @ OpenSuse 42.2 | 1.6.0_45  |
-| HotSpot 7 @ OpenSuse 42.2 | 1.7.0_79  |
-| HotSpot 8 @ OpenSuse 42.2 | 1.8.0_131 |
+| description               | version of OS | version   |
+|:--------------------------|:--------------|:----------|
+| HotSpot 6 @ OpenSuse 42.2 |      x64      | 1.6.0_45  |
+| HotSpot 7 @ OpenSuse 42.2 |      x64      | 1.7.0_79  |
+| HotSpot 8 @ OpenSuse 42.2 |      x64      | 1.8.0_131 |
 
 
 ## Mapping different GCs to flags
