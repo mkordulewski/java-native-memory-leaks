@@ -110,3 +110,13 @@ Exception in thread "main" #
 | HotSpot 6 @ OpenSuse 42.2 | 1.6.0_45  |
 | HotSpot 7 @ OpenSuse 42.2 | 1.7.0_79  |
 | HotSpot 8 @ OpenSuse 42.2 | 1.8.0_131 |
+
+
+## Mapping different GCs to flags
+| Garbage Collector              |flag                     |
+|:-------------------------------|:------------------------|
+| Serial GC                      | -XX:+UseSerialGC        |
+| Parallel GC                    | -XX:+UseParallelGC      |
+| Old Parallel GC                | -XX:+UseParallelOldGC   |
+| CMS (Concurrent Mark Sweep) GC | -XX:+UseConcMarkSweepGC |
+| G1 (Garbage First) GC          | -XX:+UseG1GC            |
