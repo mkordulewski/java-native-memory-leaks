@@ -64,11 +64,11 @@ java -XX:+UseG1GC            -cp target/memory-leaks.jar pl.kordulewski.memory.l
 ## Testing memory utilisation with ZipInputStream class
 | Garbage Collector              |flag                     | HotSpot 6 @ OpenSuse 42.2 | HotSpot 7 @ OpenSuse 42.2 | HotSpot 8 @ OpenSuse 42.2 |
 |:-------------------------------|:------------------------|:-------------------------:|:-------------------------:|:-------------------------:|
-| Serial GC                      | -XX:+UseSerialGC        |           no leak         |           no leak         |                           |
-| Parallel GC                    | -XX:+UseParallelGC      | **memory leak and error** |           no leak         |                           |
-| Old Parallel GC                | -XX:+UseParallelOldGC   | **memory leak and error** |           no leak         |                           |
-| CMS (Concurrent Mark Sweep) GC | -XX:+UseConcMarkSweepGC |           no leak         |           no leak         |                           |
-| G1 (Garbage First) GC          | -XX:+UseG1GC            | **memory leak and error** |           no leak         |                           |
+| Serial GC                      | -XX:+UseSerialGC        |           no leak         |           no leak         |           no leak         |
+| Parallel GC                    | -XX:+UseParallelGC      | **memory leak and error** |           no leak         |           no leak         |
+| Old Parallel GC                | -XX:+UseParallelOldGC   | **memory leak and error** |           no leak         |           no leak         |
+| CMS (Concurrent Mark Sweep) GC | -XX:+UseConcMarkSweepGC |           no leak         |           no leak         |           no leak         |
+| G1 (Garbage First) GC          | -XX:+UseG1GC            | **memory leak and error** |           no leak         |           no leak         |
 
 Run with different GCs:
 ```
