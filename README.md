@@ -34,8 +34,7 @@ G1 GC was called with flags:
 * HotSpot 6:   ```-XX:+UseG1GC -XX:+UnlockExperimentalVMOptions```
 
 
-## Running with different garbage collectors
-Testing memory leak in native heap - **WARNING, it really cause memory leak** (except G1 GC with HotSpot 8):
+c - **Be careful, it really causes memory leak** (except G1 GC with HotSpot 8):
 ```
 java -XX:+UseSerialGC        -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapRunner
 java -XX:+UseParallelGC      -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapRunner
