@@ -9,6 +9,13 @@ refs:
 * http://bugs.java.com/view_bug.do?bug_id=6751792
 
 
+## Building and running
+```
+mvn install
+java -jar target/memory-leaks.jar
+```
+
+
 ## Summary
 | Garbage Collector              |flag                     | HotSpot 6 @ Windows 7 x64 | HotSpot 8 @ Windows 7 x64 | HotSpot 8 @ Solaris 11 |
 |:-------------------------------|:------------------------|:-------------------------:|:-------------------------:|:----------------------:|
@@ -25,13 +32,6 @@ Table legend:
 G1 GC was called with flags:
 * HotSpot 8: ```-XX:+UseG1GC```
 * HotSpot 6:   ```-XX:+UseG1GC -XX:+UnlockExperimentalVMOptions```
-
-
-## Building and running
-```
-mvn install
-java -jar target/memory-leaks.jar
-```
 
 
 ## Running with different garbage collectors
