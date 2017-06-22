@@ -1,6 +1,8 @@
 # Java native memory leaks
 
-Testing native heap memory leaks caused by native method ```java.util.zip.Inflater.init(boolean)```.
+Testing native heap memory leaks caused by:
+* class ```java.util.zip.Inflater``` and its native method ```java.util.zip.Inflater.init(boolean)```,
+* class ```java.util.zip.ZipInputStream``` using the first one.
 
 refs:
 * http://bugs.java.com/view_bug.do?bug_id=4797189
