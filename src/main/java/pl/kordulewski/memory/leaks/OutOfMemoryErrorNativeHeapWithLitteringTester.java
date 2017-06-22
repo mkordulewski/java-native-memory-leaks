@@ -11,6 +11,8 @@ public class OutOfMemoryErrorNativeHeapWithLitteringTester {
     public void run() {
         while ( true ) {
             new Inflater( true );
+            // inflater object is not properly ended
+            // but littering is a workaround
             String s = "" + new Date();
         }
     }

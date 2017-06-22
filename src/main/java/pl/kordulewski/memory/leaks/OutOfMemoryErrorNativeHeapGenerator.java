@@ -10,6 +10,9 @@ public class OutOfMemoryErrorNativeHeapGenerator {
     public void run() {
         while ( true ) {
             new Inflater( true );
+            // inflater object is not properly ended
+            // WARNING: this causes memory leaks of native heap
+            // memory is allocated, can be deallocated but it's not yet
         }
     }
     

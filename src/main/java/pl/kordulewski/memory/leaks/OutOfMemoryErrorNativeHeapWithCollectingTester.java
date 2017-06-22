@@ -10,6 +10,8 @@ public class OutOfMemoryErrorNativeHeapWithCollectingTester {
     public void run() {
         while ( true ) {
             new Inflater( true );
+            // inflater object is not properly ended
+            // but garbage collecting is a workaround for deallocation of native heap
             System.gc();
         }
     }
