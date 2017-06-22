@@ -29,6 +29,8 @@ Table legend:
 * leak (1) - used whole OS memory, OutOfMemoryError
 * leak (2) - used part of OS memory, OutOfMemoryError or Exception
 
+See 'Error messages' section.
+
 G1 GC was called with flags:
 * HotSpot 8: ```-XX:+UseG1GC```
 * HotSpot 6:   ```-XX:+UseG1GC -XX:+UnlockExperimentalVMOptions```
