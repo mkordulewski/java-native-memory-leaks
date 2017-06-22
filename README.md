@@ -21,7 +21,7 @@ Table legend:
 * leak (2) - used part of OS memory, OutOfMemoryError or Exception
 
 G1 GC was called with flags:
-* HotSpot 8,9: ```-XX:+UseG1GC```
+* HotSpot 8: ```-XX:+UseG1GC```
 * HotSpot 6:   ```-XX:+UseG1GC -XX:+UnlockExperimentalVMOptions```
 
 
