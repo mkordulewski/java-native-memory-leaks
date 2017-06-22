@@ -60,6 +60,15 @@ java -XX:+UseConcMarkSweepGC -cp target/memory-leaks.jar pl.kordulewski.memory.l
 java -XX:+UseG1GC            -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithLitteringRunner
 ```
 
+Testing memory utilisation with ZipInputStream class:
+```
+java -XX:+UseSerialGC        -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithZipInputStreamGeneratorRunner
+java -XX:+UseParallelGC      -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithZipInputStreamGeneratorRunner
+java -XX:+UseParallelOldGC   -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithZipInputStreamGeneratorRunner
+java -XX:+UseConcMarkSweepGC -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithZipInputStreamGeneratorRunner
+java -XX:+UseG1GC            -cp target/memory-leaks.jar pl.kordulewski.memory.leaks.runners.OutOfMemoryErrorNativeHeapWithZipInputStreamGeneratorRunner
+```
+
 
 ### Alternative flags
 ```
