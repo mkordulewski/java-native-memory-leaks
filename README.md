@@ -16,7 +16,7 @@ java -jar target/memory-leaks.jar
 ```
 
 
-## Summary
+## Testing memory utilisation with Inflater class
 | Garbage Collector              |flag                     | HotSpot 6 @ Windows 7 x64 | HotSpot 8 @ Windows 7 x64 | HotSpot 8 @ Solaris 11 |
 |:-------------------------------|:------------------------|:-------------------------:|:-------------------------:|:----------------------:|
 | Serial GC                      | -XX:+UseSerialGC        |          leak (1)         |         leak (1)          |        leak (2)        |
