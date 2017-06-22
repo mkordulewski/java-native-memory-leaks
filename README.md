@@ -65,7 +65,7 @@ java -XX:+UseG1GC            -cp target/memory-leaks.jar pl.kordulewski.memory.l
 
 
 ## Testing memory utilisation with ZipInputStream class
-| Garbage Collector              |       Java 6 @ Linux      | Java 8 @ Linux | Java 8 @ Linux |
+| Garbage Collector              |       Java 6 @ Linux      | Java 7 @ Linux | Java 8 @ Linux |
 |:-------------------------------|:-------------------------:|:--------------:|:--------------:|
 | Serial GC                      |           no leak         |    no leak     |    no leak     |
 | Parallel GC                    | **memory leak and error** |    no leak     |    no leak     |
