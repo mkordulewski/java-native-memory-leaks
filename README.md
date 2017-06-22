@@ -100,3 +100,12 @@ Solaris 11 (x64):
 Exception in thread "main" #
 # There is insufficient memory for the Java Runtime Environment to continue.
 ```
+
+
+## Used JVMs
+
+| description               | version   |
+|:--------------------------|:----------|
+| HotSpot 6 @ OpenSuse 42.2 | 1.6.0_45  |
+| HotSpot 7 @ OpenSuse 42.2 | 1.7.0_79  |
+| HotSpot 8 @ OpenSuse 42.2 | 1.8.0_131 |
