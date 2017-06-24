@@ -27,16 +27,16 @@ java -jar memory-leaks.jar
 
 
 ## Testing memory utilisation with Inflater class
-| Garbage Collector              | Java 6 @ Windows | Java 8 @ Windows | Java 6 @ Linux | Java 7 @ Linux | Java 8 @ Linux | Java 8 @ Solaris |
-|:-------------------------------|:----------------:|:----------------:|:--------------:|:--------------:|:--------------:|:----------------:|
-| Serial GC                      |     leak (1)     |     leak (1)     |    leak (1)    |    leak (1)    |    leak (1)    |     leak (2)     |
-| Parallel GC                    |     leak (1)     |     leak (1)     |    leak (1)    |    leak (1)    |    leak (1)    |     leak (2)     |
-| Old Parallel GC                |     leak (1)     |     leak (1)     |    leak (1)    |    leak (1)    |    leak (1)    |     leak (2)     |
-| CMS (Concurrent Mark Sweep) GC |     leak (1)     |     leak (1)     |    leak (1)    |    leak (1)    |    leak (1)    |     leak (2)     |
-| G1 (Garbage First) GC          |     leak (1)     |   **no leak**    |    leak (1)    |    leak (1)    |    leak (1)    |     leak (2)     |
+| Garbage Collector              | Java 6 @ Windows | Java 8 @ Windows |  Java 6 @ Linux  |  Java 7 @ Linux  |  Java 8 @ Linux  | Java 8 @ Solaris |
+|:-------------------------------|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
+| Serial GC                      |leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|     leak (2)     |
+| Parallel GC                    |leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|     leak (2)     |
+| Old Parallel GC                |leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|     leak (2)     |
+| CMS (Concurrent Mark Sweep) GC |leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|     leak (2)     |
+| G1 (Garbage First) GC          |leak and error (1)|   **no leak**    |leak and error (1)|leak and error (1)|leak and error (1)|     leak (2)     |
 
 Table legend:
-* leak (1) - whole OS memory allocated, OutOfMemoryError
+* leak and error (1) - whole OS memory allocated, OutOfMemoryError
 * leak (2) - part of OS memory allocated, OutOfMemoryError or Exception
 
 See 'Error messages' section.
