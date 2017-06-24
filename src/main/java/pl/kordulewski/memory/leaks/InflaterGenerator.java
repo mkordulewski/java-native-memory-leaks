@@ -11,7 +11,7 @@ public class InflaterGenerator {
         while ( true ) {
             final Inflater inflater = new Inflater( true );
             inflater.end();
-            // inflater object is not properly ended
+            // inflater object is properly ended
             // there is no memory leak of native heap
         }
     }
