@@ -6,7 +6,7 @@ import java.util.zip.Inflater;
 /**
  * Created by Michał Kordulewski on 2017-06-09.
  */
-public class OutOfMemoryErrorNativeHeapWithLitteringTester {
+public class InflaterNotProperlyEndedWithLitteringGenerator {
     
     public void run() {
         while ( true ) {
