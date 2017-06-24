@@ -1,18 +1,18 @@
 package pl.kordulewski.memory.leaks.runners;
 
-import pl.kordulewski.memory.leaks.InflaterGenerator;
+import pl.kordulewski.memory.leaks.InflaterProperlyEndedGenerator;
 
 /**
  * Created by Michał Kordulewski on 2017-06-09.
  * 
- * @see InflaterGenerator
+ * @see InflaterProperlyEndedGenerator
  */
-public class InflaterGeneratorRunner {
+public class InflaterProperlyEndedGeneratorRunner {
 
     public static void main (String... args) {
         System.out.println("START");
         System.out.println("... wait");
-        new InflaterGenerator().run();
+        new InflaterProperlyEndedGenerator().run();
     }
     
 }
