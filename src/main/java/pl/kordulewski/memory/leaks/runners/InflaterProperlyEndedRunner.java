@@ -7,7 +7,7 @@ import pl.kordulewski.memory.leaks.InflaterProperlyEndedGenerator;
  * 
  * @see InflaterProperlyEndedGenerator
  */
-public class InflaterProperlyEndedGeneratorRunner {
+public class InflaterProperlyEndedRunner {
 
     public static void main (String... args) {
         System.out.println("START");
