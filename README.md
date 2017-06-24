@@ -127,7 +127,7 @@ Exception in thread "main" #
 | Java 6 @ Windows | HotSpot | 1.6.0_45        | Windows 7     |      x64      |
 | Java 7 @ Windows | HotSpot | 1.7.0_79        | Windows 7     |      x64      |
 | Java 8 @ Windows | HotSpot | 1.8.0_45        | Windows 7     |      x64      |
-| Java 8 @ Solaris | HotSpot | 1.8.0_60        | Solaris 11    |      x64      |
+| Java 8 @ Solaris | HotSpot | 1.8.0_60        | Solaris 11.3  |      x86      |
 
 
 ## Mapping different GCs to flags
