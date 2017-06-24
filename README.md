@@ -101,14 +101,11 @@ java -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -cp memory-leaks.jar pl.kordu
 
 
 ## Error messages
-
-Windows 7 x64, OpenSuse 42 (x64), Solaris 11 (x63):
 ```
 java.lang.OutOfMemoryError
     at java.util.zip.Inflater.init(Native Method)
 ```
 
-Solaris 11 (x64):
 ```
 Exception in thread "main" #
 # There is insufficient memory for the Java Runtime Environment to continue.
