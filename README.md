@@ -10,9 +10,19 @@ refs:
 
 
 ## Building and running
+Build:
 ```
 mvn install
-java -jar target/memory-leaks.jar
+```
+
+Go to _target_ directory to run jar file:
+```
+cd target
+```
+
+Show commands:
+```
+java -jar memory-leaks.jar
 ```
 
 
