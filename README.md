@@ -4,7 +4,7 @@ Testing native heap memory leaks caused by:
 * class ```java.util.zip.Inflater``` and its native method ```java.util.zip.Inflater.init(boolean)```,
 * class ```java.util.zip.ZipInputStream``` using the first one.
 
-**Remember**: proper way to avoid memory leaks is deallocating memory by calling methods ```Inflater.end()``` or ```ZipInputStream.close()```. But sometimes it's necessary to use a workaround for a legacy or thid-party code with bugs.
+**Remember**: proper way to avoid memory leaks is deallocating memory by calling methods ```Inflater#end()``` or ```ZipInputStream#close()```. But sometimes it's necessary to use a workaround for a legacy or thid-party code with bugs.
 
 refs:
 * http://bugs.java.com/view_bug.do?bug_id=4797189
