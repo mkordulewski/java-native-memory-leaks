@@ -62,11 +62,11 @@ java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 
 | Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 9 @ Windows | Java 8 @ Solaris |
 |:-------------------------------|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
-| Serial GC                      |      no leak     |                  |                  |                  |                  |                  |                  |
-| Parallel GC                    |      no leak     |                  |                  |                  |                  |                  |                  |
-| Old Parallel GC                |      no leak     |                  |                  |                  |                  |                  |                  |
-| CMS (Concurrent Mark Sweep) GC |      no leak     |                  |                  |                  |                  |                  |                  |
-| G1 (Garbage First) GC          |      no leak     |                  |                  |                  |                  |                  |                  |
+| Serial GC                      |      no leak     |                  |      no leak     |                  |                  |                  |                  |
+| Parallel GC                    |      no leak     |                  |      no leak     |                  |                  |                  |                  |
+| Old Parallel GC                |      no leak     |                  |      no leak     |                  |                  |                  |                  |
+| CMS (Concurrent Mark Sweep) GC |      no leak     |                  |      no leak     |                  |                  |                  |                  |
+| G1 (Garbage First) GC          |      no leak     |                  |      no leak     |                  |                  |                  |                  |
 
 ### Potential workaround: Objects intentionally litter Java heap
 It's usually safe workaround, no memory leak:
@@ -138,11 +138,11 @@ java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 
 | Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 9 @ Windows | Java 8 @ Solaris |
 |:-------------------------------|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
-| Serial GC                      |      no leak     |                  |                  |                  |                  |                  |                  |
-| Parallel GC                    |      no leak     |                  |                  |                  |                  |                  |                  |
-| Old Parallel GC                |      no leak     |                  |                  |                  |                  |                  |                  |
-| CMS (Concurrent Mark Sweep) GC |      no leak     |                  |                  |                  |                  |                  |                  |
-| G1 (Garbage First) GC          |      no leak     |                  |                  |                  |                  |                  |                  |
+| Serial GC                      |      no leak     |                  |      no leak     |                  |                  |                  |                  |
+| Parallel GC                    |      no leak     |                  |      no leak     |                  |                  |                  |                  |
+| Old Parallel GC                |      no leak     |                  |      no leak     |                  |                  |                  |                  |
+| CMS (Concurrent Mark Sweep) GC |      no leak     |                  |      no leak     |                  |                  |                  |                  |
+| G1 (Garbage First) GC          |      no leak     |                  |      no leak     |                  |                  |                  |                  |
 
 ### Potential workaround: Objects intentionally litter Java heap
 It's usually safe workaround, no memory leak:
@@ -156,11 +156,11 @@ java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 
 | Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 9 @ Windows | Java 8 @ Solaris |
 |:-------------------------------|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
-| Serial GC                      |      no leak     |                  |                  |                  |                  |                  |                  |
-| Parallel GC                    |**leak and error**|                  |                  |                  |                  |                  |                  |
-| Old Parallel GC                |**leak and error**|                  |                  |                  |                  |                  |                  |
-| CMS (Concurrent Mark Sweep) GC |      no leak     |                  |                  |                  |                  |                  |                  |
-| G1 (Garbage First) GC          |**leak and error**|                  |                  |                  |                  |                  |                  |
+| Serial GC                      |      no leak     |                  |      no leak     |                  |                  |                  |                  |
+| Parallel GC                    |**leak and error**|                  |      no leak     |                  |                  |                  |                  |
+| Old Parallel GC                |**leak and error**|                  |      no leak     |                  |                  |                  |                  |
+| CMS (Concurrent Mark Sweep) GC |      no leak     |                  |      no leak     |                  |                  |                  |                  |
+| G1 (Garbage First) GC          |**leak and error**|                  |      no leak     |                  |                  |                  |                  |
 
 ### Instance is properly ended
 It's safe, no memory leak:
@@ -174,11 +174,11 @@ java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 
 | Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 9 @ Windows | Java 8 @ Solaris |
 |:-------------------------------|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
-| Serial GC                      |                  |                  |                  |                  |                  |                  |                  |
-| Parallel GC                    |                  |                  |                  |                  |                  |                  |                  |
-| Old Parallel GC                |                  |                  |                  |                  |                  |                  |                  |
-| CMS (Concurrent Mark Sweep) GC |                  |                  |                  |                  |                  |                  |                  |
-| G1 (Garbage First) GC          |                  |                  |                  |                  |                  |                  |                  |
+| Serial GC                      |                  |                  |      no leak     |                  |                  |                  |                  |
+| Parallel GC                    |                  |                  |      no leak     |                  |                  |                  |                  |
+| Old Parallel GC                |                  |                  |      no leak     |                  |                  |                  |                  |
+| CMS (Concurrent Mark Sweep) GC |                  |                  |      no leak     |                  |                  |                  |                  |
+| G1 (Garbage First) GC          |                  |                  |      no leak     |                  |                  |                  |                  |
 
 
 ### Alternative flags
