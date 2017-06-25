@@ -60,6 +60,14 @@ java -XX:+UseConcMarkSweepGC -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedWithCollectingRunner
 ```
 
+| Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 9 @ Windows | Java 8 @ Solaris |
+|:-------------------------------|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
+| Serial GC                      |                  |                  |                  |                  |                  |                  |                  |
+| Parallel GC                    |                  |                  |                  |                  |                  |                  |                  |
+| Old Parallel GC                |                  |                  |                  |                  |                  |                  |                  |
+| CMS (Concurrent Mark Sweep) GC |                  |                  |                  |                  |                  |                  |                  |
+| G1 (Garbage First) GC          |                  |                  |                  |                  |                  |                  |                  |
+
 ### Objects intentionally litter Java heap
 It's usually safe workaround, no memory leak:
 ```
@@ -70,6 +78,14 @@ java -XX:+UseConcMarkSweepGC -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedWithLitteringRunner
 ```
 
+| Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 9 @ Windows | Java 8 @ Solaris |
+|:-------------------------------|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
+| Serial GC                      |                  |                  |                  |                  |                  |                  |                  |
+| Parallel GC                    |                  |                  |                  |                  |                  |                  |                  |
+| Old Parallel GC                |                  |                  |                  |                  |                  |                  |                  |
+| CMS (Concurrent Mark Sweep) GC |                  |                  |                  |                  |                  |                  |                  |
+| G1 (Garbage First) GC          |                  |                  |                  |                  |                  |                  |                  |
+
 ### Instance is properly ended
 It's safe, no memory leak:
 ```
@@ -79,6 +95,14 @@ java -XX:+UseParallelOldGC   -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 java -XX:+UseConcMarkSweepGC -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterProperlyEndedRunner
 java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterProperlyEndedRunner
 ```
+
+| Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 9 @ Windows | Java 8 @ Solaris |
+|:-------------------------------|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
+| Serial GC                      |                  |                  |                  |                  |                  |                  |                  |
+| Parallel GC                    |                  |                  |                  |                  |                  |                  |                  |
+| Old Parallel GC                |                  |                  |                  |                  |                  |                  |                  |
+| CMS (Concurrent Mark Sweep) GC |                  |                  |                  |                  |                  |                  |                  |
+| G1 (Garbage First) GC          |                  |                  |                  |                  |                  |                  |                  |
 
 
 
@@ -112,6 +136,14 @@ java -XX:+UseConcMarkSweepGC -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedWithCollectingRunner
 ```
 
+| Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 9 @ Windows | Java 8 @ Solaris |
+|:-------------------------------|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
+| Serial GC                      |                  |                  |                  |                  |                  |                  |                  |
+| Parallel GC                    |                  |                  |                  |                  |                  |                  |                  |
+| Old Parallel GC                |                  |                  |                  |                  |                  |                  |                  |
+| CMS (Concurrent Mark Sweep) GC |                  |                  |                  |                  |                  |                  |                  |
+| G1 (Garbage First) GC          |                  |                  |                  |                  |                  |                  |                  |
+
 ### Objects intentionally litter Java heap
 It's usually safe workaround, no memory leak:
 ```
@@ -122,6 +154,14 @@ java -XX:+UseConcMarkSweepGC -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedWithLitteringRunner
 ```
 
+| Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 9 @ Windows | Java 8 @ Solaris |
+|:-------------------------------|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
+| Serial GC                      |                  |                  |                  |                  |                  |                  |                  |
+| Parallel GC                    |                  |                  |                  |                  |                  |                  |                  |
+| Old Parallel GC                |                  |                  |                  |                  |                  |                  |                  |
+| CMS (Concurrent Mark Sweep) GC |                  |                  |                  |                  |                  |                  |                  |
+| G1 (Garbage First) GC          |                  |                  |                  |                  |                  |                  |                  |
+
 ### Instance is properly ended
 It's safe, no memory leak:
 ```
@@ -131,6 +171,14 @@ java -XX:+UseParallelOldGC   -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 java -XX:+UseConcMarkSweepGC -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamProperlyClosedRunner
 java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamProperlyClosedRunner
 ```
+
+| Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 9 @ Windows | Java 8 @ Solaris |
+|:-------------------------------|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
+| Serial GC                      |                  |                  |                  |                  |                  |                  |                  |
+| Parallel GC                    |                  |                  |                  |                  |                  |                  |                  |
+| Old Parallel GC                |                  |                  |                  |                  |                  |                  |                  |
+| CMS (Concurrent Mark Sweep) GC |                  |                  |                  |                  |                  |                  |                  |
+| G1 (Garbage First) GC          |                  |                  |                  |                  |                  |                  |                  |
 
 
 ### Alternative flags
