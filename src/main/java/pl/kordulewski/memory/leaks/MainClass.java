@@ -6,7 +6,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**
- * Created by Michał Kordulewski on 21.06.17.
+ * @author Michał Kordulewski
+ * Date:   2017-06-09
  */
 public class MainClass {
 

@@ -5,7 +5,8 @@ import pl.kordulewski.memory.leaks.InflaterProperlyEndedGenerator;
 /**
  * Class to run from the command line.
  *
- * Created by Michał Kordulewski on 2017-06-09.
+ * @author Michał Kordulewski
+ * Date:   2017-06-09
  * 
  * @see InflaterProperlyEndedGenerator
  */

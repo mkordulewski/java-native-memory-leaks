@@ -5,7 +5,8 @@ import java.util.Date;
 import java.util.zip.ZipInputStream;
 
 /**
- * Created by Michał Kordulewski on 2017-06-09.
+ * @author Michał Kordulewski
+ * Date:   2017-06-09
  */
 public class ZipInputStreamNotProperlyClosedWithLitteringGenerator {
 
