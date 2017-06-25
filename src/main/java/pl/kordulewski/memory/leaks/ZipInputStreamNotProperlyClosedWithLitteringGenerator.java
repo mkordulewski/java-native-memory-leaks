@@ -5,6 +5,9 @@ import java.util.Date;
 import java.util.zip.ZipInputStream;
 
 /**
+ * Testing memory utilisation in native heap when objects intentionally litter Java heap.
+ * It's usually safe, no memory leak.
+ *
  * @author Michał Kordulewski
  * Date:   2017-06-09
  */

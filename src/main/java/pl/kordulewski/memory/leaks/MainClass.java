@@ -6,6 +6,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**
+ * Main class printing help message.
+ *
  * @author Michał Kordulewski
  * Date:   2017-06-09
  */

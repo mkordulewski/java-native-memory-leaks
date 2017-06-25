@@ -1,6 +1,8 @@
 package pl.kordulewski.memory.leaks;
 
 /**
+ * Constants only.
+ *
  * Created by Michał Kordulewski on 25.06.17.
  */
 public class Constants {

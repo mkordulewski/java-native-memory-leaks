@@ -5,6 +5,9 @@ import java.io.InputStream;
 import java.util.zip.ZipInputStream;
 
 /**
+ * Testing memory utilisation in native heap when instance of ZipInputStream class is properly ended.
+ * It's safe, no memory leak.
+ *
  * @author Michał Kordulewski
  * Date:   2017-06-09
  */
