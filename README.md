@@ -50,7 +50,7 @@ Table legend:
 * leak and error (1) - whole OS memory allocated, OutOfMemoryError
 * leak and error (2) - part of OS memory allocated, OutOfMemoryError or Exception
 
-### GC is called periodically
+### Potential workaround: GC is called periodically
 It's usually safe workaround, no memory leak:
 ```
 java -XX:+UseSerialGC        -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedWithCollectingRunner
@@ -68,7 +68,7 @@ java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 | CMS (Concurrent Mark Sweep) GC |                  |                  |                  |                  |                  |                  |                  |
 | G1 (Garbage First) GC          |                  |                  |                  |                  |                  |                  |                  |
 
-### Objects intentionally litter Java heap
+### Potential workaround: Objects intentionally litter Java heap
 It's usually safe workaround, no memory leak:
 ```
 java -XX:+UseSerialGC        -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedWithLitteringRunner
@@ -126,7 +126,7 @@ java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 | CMS (Concurrent Mark Sweep) GC |      no leak     |    no leak     |    no leak     |      no leak     |      no leak     |      no leak     |
 | G1 (Garbage First) GC          |**leak and error**|    no leak     |    no leak     |**leak and error**|      no leak     |      no leak     |
 
-### GC is called periodically
+### Potential workaround: GC is called periodically
 It's usually safe workaround, no memory leak:
 ```
 java -XX:+UseSerialGC        -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedWithCollectingRunner
@@ -144,7 +144,7 @@ java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 | CMS (Concurrent Mark Sweep) GC |                  |                  |                  |                  |                  |                  |                  |
 | G1 (Garbage First) GC          |                  |                  |                  |                  |                  |                  |                  |
 
-### Objects intentionally litter Java heap
+### Potential workaround: Objects intentionally litter Java heap
 It's usually safe workaround, no memory leak:
 ```
 java -XX:+UseSerialGC        -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedWithLitteringRunner
