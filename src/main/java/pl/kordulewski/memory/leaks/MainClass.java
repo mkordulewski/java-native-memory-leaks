@@ -12,7 +12,7 @@ import java.io.InputStreamReader;
 public class MainClass {
 
     public static void main(String... args) {
-        InputStream input = MainClass.class.getResourceAsStream("/info.txt");
+        InputStream input = MainClass.class.getResourceAsStream("/help.txt");
         String result = getStringFromInputStream(input);
         System.out.println(result);
         try {
