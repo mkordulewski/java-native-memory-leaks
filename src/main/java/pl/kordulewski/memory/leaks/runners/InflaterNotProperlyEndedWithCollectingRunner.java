@@ -5,6 +5,9 @@ import pl.kordulewski.memory.leaks.InflaterNotProperlyEndedWithCollectingGenerat
 /**
  * Class to run from the command line.
  *
+ * Testing memory utilisation in native heap when GC is called periodically.
+ * It's usually safe, no memory leak.
+ *
  * @author Michał Kordulewski
  * Date:   2017-06-09
  * 
