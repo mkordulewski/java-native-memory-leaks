@@ -46,7 +46,7 @@ G1 GC was called with flags:
 * HotSpot 6: ```-XX:+UseG1GC -XX:+UnlockExperimentalVMOptions```
 
 
-Run with different GCs - **Be careful, it really causes memory leak** (except G1 GC with HotSpot 8):
+Testing memory leak in native heap - **be careful, it really may cause memory leak**:
 ```
 java -XX:+UseSerialGC        -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedRunner
 java -XX:+UseParallelGC      -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedRunner
@@ -55,7 +55,7 @@ java -XX:+UseConcMarkSweepGC -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedRunner
 ```
 
-Testing memory leak in native heap when GC is called periodically - it's safe, no memory leak:
+Testing memory utilisation in native heap when GC is called periodically - it's usually safe, no memory leak:
 ```
 java -XX:+UseSerialGC        -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedWithCollectingRunner
 java -XX:+UseParallelGC      -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedWithCollectingRunner
@@ -64,7 +64,7 @@ java -XX:+UseConcMarkSweepGC -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedWithCollectingRunner
 ```
 
-Testing memory leak in native heap when objects intentionally litter Java heap - it's safe, no memory leak:
+Testing memory utilisation in native heap when objects intentionally litter Java heap - it's usually safe, no memory leak:
 ```
 java -XX:+UseSerialGC        -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedWithLitteringRunner
 java -XX:+UseParallelGC      -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedWithLitteringRunner
@@ -73,7 +73,7 @@ java -XX:+UseConcMarkSweepGC -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedWithLitteringRunner
 ```
 
-Testing memory leak in native heap when Inflater object is properly ended - it's safe, no memory leak:
+Testing memory utilisation in native heap when instance of Inflater class is properly ended - it's safe, no memory leak:
 ```
 java -XX:+UseSerialGC        -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterProperlyEndedRunner
 java -XX:+UseParallelGC      -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterProperlyEndedRunner
@@ -93,7 +93,7 @@ java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 | CMS (Concurrent Mark Sweep) GC |      no leak     |    no leak     |    no leak     |      no leak     |      no leak     |      no leak     |
 | G1 (Garbage First) GC          |**leak and error**|    no leak     |    no leak     |**leak and error**|      no leak     |      no leak     |
 
-Run with different GCs:
+Testing memory utilisation in native heap - be carefull, it really may cause memory leak:
 ```
 java -XX:+UseSerialGC        -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedRunner
 java -XX:+UseParallelGC      -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedRunner
@@ -102,7 +102,7 @@ java -XX:+UseConcMarkSweepGC -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedRunner
 ```
 
-Run with different GCs:
+Testing memory utilisation in native heap when GC is called periodically - it's usually safe, no memory leak:
 ```
 java -XX:+UseSerialGC        -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedWithCollectingRunner
 java -XX:+UseParallelGC      -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedWithCollectingRunner
@@ -111,7 +111,7 @@ java -XX:+UseConcMarkSweepGC -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedWithCollectingRunner
 ```
 
-Run with different GCs:
+Testing memory utilisation in native heap when objects intentionally litter Java heap - it's usually safe, no memory leak:
 ```
 java -XX:+UseSerialGC        -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedWithLitteringRunner
 java -XX:+UseParallelGC      -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedWithLitteringRunner
@@ -120,7 +120,7 @@ java -XX:+UseConcMarkSweepGC -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedWithLitteringRunner
 ```
 
-Testing memory leak in native heap when ZipInputStream object is properly closed - it's safe, no memory leak:
+Testing memory utilisation in native heap when instance of ZipInputStream class is properly ended - it's safe, no memory leak:
 ```
 java -XX:+UseSerialGC        -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamProperlyClosedRunner
 java -XX:+UseParallelGC      -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamProperlyClosedRunner
