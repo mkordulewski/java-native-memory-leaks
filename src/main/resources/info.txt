@@ -5,7 +5,7 @@ Testing native heap memory leaks caused by:
 REMEMBER: proper way to avoid memory leaks is deallocating memory by calling methods Inflater#end() or ZipInputStream#close().
 But sometimes it's necessary to use a workaround for a legacy or thid-party code with bugs.
 
-## Testing memory utilisation with Inflater class
+## Inflater
 
 Testing memory utilisation in native heap - be carefull, it really cause memory leak:
 java -XX:+UseSerialGC        -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedRunner
@@ -36,7 +36,7 @@ java -XX:+UseConcMarkSweepGC -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterProperlyEndedRunner
 
 
-## Testing memory utilisation with ZipInputStream class
+## ZipInputStream
 
 Testing memory utilisation in native heap - be carefull, it really may cause memory leak:
 java -XX:+UseSerialGC        -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedRunner
