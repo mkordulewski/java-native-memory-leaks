@@ -175,3 +175,18 @@ Exception in thread "main" #
 | Old Parallel GC                | -XX:+UseParallelOldGC   |
 | CMS (Concurrent Mark Sweep) GC | -XX:+UseConcMarkSweepGC |
 | G1 (Garbage First) GC          | -XX:+UseG1GC            |
+
+
+## All java classes ready to run
+Classes are self-describing:
+```
+pl.kordulewski.memory.leaks.runners.InflaterProperlyEndedRunner
+pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedRunner
+pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedWithCollectingRunner
+pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedWithLitteringRunner
+
+pl.kordulewski.memory.leaks.runners.ZipInputStreamProperlyClosedRunner
+pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedRunner
+pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedWithCollectingRunner
+pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedWithLitteringRunner
+```
