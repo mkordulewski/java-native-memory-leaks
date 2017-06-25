@@ -177,15 +177,14 @@ G1 GC was called with flags:
 
 
 ## All java classes ready to run
-Classes are self-describing:
-```
-pl.kordulewski.memory.leaks.runners.InflaterProperlyEndedRunner
-pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedRunner
-pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedWithCollectingRunner
-pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedWithLitteringRunner
-
-pl.kordulewski.memory.leaks.runners.ZipInputStreamProperlyClosedRunner
-pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedRunner
-pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedWithCollectingRunner
-pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedWithLitteringRunner
-```
+Class names are self-describing:
+| class                                               | safe?                                     | description                            |
+|:----------------------------------------------------|:------------------------------------------|:---------------------------------------|
+| InflaterProperlyEndedRunner                         | safe                                      | instance is properly ended             |
+| InflaterNotProperlyEndedRunner                      | may cause leak                            | instance is _not_ properly ended       |
+| InflaterNotProperlyEndedWithCollectingRunner        | tested as a workaround - potentially safe | GC is called periodically              |
+| InflaterNotProperlyEndedWithLitteringRunner         | tested as a workaround - potentially safe | objects intentionally litter Java heap |
+| ZipInputStreamProperlyClosedRunner                  | safe                                      | instance is properly closed            |
+| ZipInputStreamNotProperlyClosedRunner               | may cause leak                            | instance is _not_ properly closed      |
+| ZipInputStreamNotProperlyClosedWithCollectingRunner | tested as a workaround - potentially safe | GC is called periodically              |
+| ZipInputStreamNotProperlyClosedWithLitteringRunner  | tested as a workaround - potentially safe | objects intentionally litter Java heap |
