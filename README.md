@@ -10,20 +10,18 @@ refs:
 
 
 ## Building and running
-Build:
 ```
 mvn install
 ```
-
 Go to _target_ directory to run jar file:
 ```
 cd target
 ```
-
 Show commands:
 ```
 java -jar memory-leaks.jar
 ```
+Next sections shows commands to run tests with 5 different garbage collectors and some results.
 
 
 ## Testing memory utilisation with **Inflater** class
