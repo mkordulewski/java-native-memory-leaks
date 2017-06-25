@@ -41,7 +41,7 @@ See 'Error messages' section.
 
 G1 GC was called with flags:
 * HotSpot 8: ```-XX:+UseG1GC```
-* HotSpot 6:   ```-XX:+UseG1GC -XX:+UnlockExperimentalVMOptions```
+* HotSpot 6: ```-XX:+UseG1GC -XX:+UnlockExperimentalVMOptions```
 
 
 Run with different GCs - **Be careful, it really causes memory leak** (except G1 GC with HotSpot 8):
