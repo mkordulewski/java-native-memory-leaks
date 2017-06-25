@@ -7,7 +7,7 @@ But sometimes it's necessary to use a workaround for a legacy or thid-party code
 
 ## Inflater
 
-Testing memory utilisation in native heap - be carefull, it really cause memory leak:
+Testing memory utilisation in native heap when instance of Inflater class is not properly ended - be carefull, it really cause memory leak:
 java -XX:+UseSerialGC        -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedRunner
 java -XX:+UseParallelGC      -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedRunner
 java -XX:+UseParallelOldGC   -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedRunner
@@ -38,7 +38,7 @@ java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 
 ## ZipInputStream
 
-Testing memory utilisation in native heap - be carefull, it really may cause memory leak:
+Testing memory utilisation in native heap when instance of ZipInputStream class is not properly ended - be carefull, it really may cause memory leak:
 java -XX:+UseSerialGC        -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedRunner
 java -XX:+UseParallelGC      -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedRunner
 java -XX:+UseParallelOldGC   -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedRunner
