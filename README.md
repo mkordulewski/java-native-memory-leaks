@@ -46,7 +46,7 @@ G1 GC was called with flags:
 * HotSpot 6: ```-XX:+UseG1GC -XX:+UnlockExperimentalVMOptions```
 
 
-Testing memory leak in native heap - **be careful, it really may cause memory leak**:
+Testing memory utilisation in native heap when instance of Inflater class is _not_ properly ended - **be careful, it really may cause memory leak**:
 ```
 java -XX:+UseSerialGC        -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedRunner
 java -XX:+UseParallelGC      -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedRunner
@@ -93,7 +93,7 @@ java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 | CMS (Concurrent Mark Sweep) GC |      no leak     |    no leak     |    no leak     |      no leak     |      no leak     |      no leak     |
 | G1 (Garbage First) GC          |**leak and error**|    no leak     |    no leak     |**leak and error**|      no leak     |      no leak     |
 
-Testing memory utilisation in native heap - be carefull, it really may cause memory leak:
+Testing memory utilisation in native heap when instance of ZipInputStream class is __not__ properly ended - be carefull, it really may cause memory leak:
 ```
 java -XX:+UseSerialGC        -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedRunner
 java -XX:+UseParallelGC      -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedRunner
