@@ -41,11 +41,6 @@ Table legend:
 
 See 'Error messages' section.
 
-G1 GC was called with flags:
-* HotSpot 8: ```-XX:+UseG1GC```
-* HotSpot 6: ```-XX:+UseG1GC -XX:+UnlockExperimentalVMOptions```
-
-
 Testing memory utilisation in native heap when instance of Inflater class is _not_ properly ended - **be careful, it really may cause memory leak**:
 ```
 java -XX:+UseSerialGC        -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedRunner
@@ -175,6 +170,10 @@ Exception in thread "main" #
 | Old Parallel GC                | -XX:+UseParallelOldGC   |
 | CMS (Concurrent Mark Sweep) GC | -XX:+UseConcMarkSweepGC |
 | G1 (Garbage First) GC          | -XX:+UseG1GC            |
+
+G1 GC was called with flags:
+* HotSpot 6: ```-XX:+UseG1GC -XX:+UnlockExperimentalVMOptions```
+* all other cases: ```-XX:+UseG1GC```
 
 
 ## All java classes ready to run
