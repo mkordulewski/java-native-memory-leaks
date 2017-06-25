@@ -38,13 +38,13 @@ java -XX:+UseConcMarkSweepGC -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedRunner
 ```
 
-| Garbage Collector              | Java 6 @ Windows | Java 7 @ Windows | Java 8 @ Windows |  Java 6 @ Linux  |  Java 7 @ Linux  |  Java 8 @ Linux  | Java 8 @ Solaris |
+| Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 8 @ Windows | Java 8 @ Solaris |
 |:-------------------------------|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
 | Serial GC                      |leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|leak and error (2)|
 | Parallel GC                    |leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|leak and error (2)|
 | Old Parallel GC                |leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|leak and error (2)|
 | CMS (Concurrent Mark Sweep) GC |leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|leak and error (2)|
-| G1 (Garbage First) GC          |leak and error (1)|leak and error (1)|   **no leak**    |leak and error (1)|leak and error (1)|leak and error (1)|leak and error (2)|
+| G1 (Garbage First) GC          |leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|   **no leak**    |leak and error (2)|
 
 Table legend:
 * leak and error (1) - whole OS memory allocated, OutOfMemoryError
@@ -60,7 +60,7 @@ java -XX:+UseConcMarkSweepGC -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedWithCollectingRunner
 ```
 
-| Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 9 @ Windows | Java 8 @ Solaris |
+| Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 8 @ Windows | Java 8 @ Solaris |
 |:-------------------------------|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
 | Serial GC                      |      no leak     |                  |      no leak     |                  |      no leak     |                  |                  |
 | Parallel GC                    |      no leak     |                  |      no leak     |                  |      no leak     |                  |                  |
@@ -78,7 +78,7 @@ java -XX:+UseConcMarkSweepGC -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedWithLitteringRunner
 ```
 
-| Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 9 @ Windows | Java 8 @ Solaris |
+| Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 8 @ Windows | Java 8 @ Solaris |
 |:-------------------------------|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
 | Serial GC                      |      no leak     |                  |      no leak     |                  |      no leak     |                  |                  |
 | Parallel GC                    |**leak and error**|                  |      no leak     |                  |      no leak     |                  |                  |
@@ -96,7 +96,7 @@ java -XX:+UseConcMarkSweepGC -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterProperlyEndedRunner
 ```
 
-| Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 9 @ Windows | Java 8 @ Solaris |
+| Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 8 @ Windows | Java 8 @ Solaris |
 |:-------------------------------|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
 | Serial GC                      |      no leak     |                  |      no leak     |                  |      no leak     |                  |                  |
 | Parallel GC                    |      no leak     |                  |      no leak     |                  |      no leak     |                  |                  |
@@ -136,7 +136,7 @@ java -XX:+UseConcMarkSweepGC -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedWithCollectingRunner
 ```
 
-| Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 9 @ Windows | Java 8 @ Solaris |
+| Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 8 @ Windows | Java 8 @ Solaris |
 |:-------------------------------|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
 | Serial GC                      |      no leak     |                  |      no leak     |                  |      no leak     |                  |                  |
 | Parallel GC                    |      no leak     |                  |      no leak     |                  |      no leak     |                  |                  |
@@ -154,7 +154,7 @@ java -XX:+UseConcMarkSweepGC -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedWithLitteringRunner
 ```
 
-| Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 9 @ Windows | Java 8 @ Solaris |
+| Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 8 @ Windows | Java 8 @ Solaris |
 |:-------------------------------|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
 | Serial GC                      |      no leak     |                  |      no leak     |                  |      no leak     |                  |                  |
 | Parallel GC                    |**leak and error**|                  |      no leak     |                  |      no leak     |                  |                  |
@@ -172,7 +172,7 @@ java -XX:+UseConcMarkSweepGC -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamProperlyClosedRunner
 ```
 
-| Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 9 @ Windows | Java 8 @ Solaris |
+| Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 8 @ Windows | Java 8 @ Solaris |
 |:-------------------------------|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
 | Serial GC                      |      no leak     |                  |      no leak     |                  |      no leak     |                  |                  |
 | Parallel GC                    |      no leak     |                  |      no leak     |                  |      no leak     |                  |                  |
