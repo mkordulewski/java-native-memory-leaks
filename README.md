@@ -26,7 +26,7 @@ java -jar memory-leaks.jar
 Next sections shows commands to run tests with 5 different garbage collectors and some results.
 
 
-## Testing memory utilisation with **Inflater** class
+## Testing memory utilisation with ```Inflater``` class
 | Garbage Collector              | Java 6 @ Windows | Java 7 @ Windows | Java 8 @ Windows |  Java 6 @ Linux  |  Java 7 @ Linux  |  Java 8 @ Linux  | Java 8 @ Solaris |
 |:-------------------------------|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
 | Serial GC                      |leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|leak and error (1)|leak and error (2)|
@@ -84,7 +84,7 @@ java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 
 
 
-## Testing memory utilisation with **ZipInputStream** class
+## Testing memory utilisation with ```ZipInputStream``` class
 | Garbage Collector              |  Java 6 @ Linux  | Java 7 @ Linux | Java 8 @ Linux | Java 6 @ Windows | Java 7 @ Windows | Java 8 @ Windows |
 |:-------------------------------|:----------------:|:--------------:|:--------------:|:----------------:|:----------------:|:----------------:|
 | Serial GC                      |      no leak     |    no leak     |    no leak     |      no leak     |      no leak     |      no leak     |
