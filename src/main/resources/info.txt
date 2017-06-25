@@ -1,5 +1,9 @@
-Testing native heap memory leaks caused by native method java.util.zip.Inflater.init(boolean).
+Testing native heap memory leaks caused by:
+* class java.util.zip.Inflater and its native method java.util.zip.Inflater.init(boolean),
+* class java.util.zip.ZipInputStream using the first one.
 
+REMEMBER: proper way to avoid memory leaks is deallocating memory by calling methods Inflater#end() or ZipInputStream#close().
+But sometimes it's necessary to use a workaround for a legacy or thid-party code with bugs.
 
 ## Testing memory utilisation with Inflater class
 
@@ -24,7 +28,7 @@ java -XX:+UseParallelOldGC   -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 java -XX:+UseConcMarkSweepGC -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedWithLitteringRunner
 java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedWithLitteringRunner
 
-Testing memory utilisation in native heap when instance of Inflater class is properly ended - it's usually safe, no memory leak:
+Testing memory utilisation in native heap when instance of Inflater class is properly ended - it's safe, no memory leak:
 java -XX:+UseSerialGC        -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterProperlyEndedRunner
 java -XX:+UseParallelGC      -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterProperlyEndedRunner
 java -XX:+UseParallelOldGC   -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterProperlyEndedRunner
@@ -55,7 +59,7 @@ java -XX:+UseParallelOldGC   -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 java -XX:+UseConcMarkSweepGC -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedWithLitteringRunner
 java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamNotProperlyClosedWithLitteringRunner
 
-Testing memory utilisation in native heap when instance of ZipInputStream class is properly ended - it's usually safe, no memory leak:
+Testing memory utilisation in native heap when instance of ZipInputStream class is properly ended - it's safe, no memory leak:
 java -XX:+UseSerialGC        -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamProperlyClosedRunner
 java -XX:+UseParallelGC      -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamProperlyClosedRunner
 java -XX:+UseParallelOldGC   -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.ZipInputStreamProperlyClosedRunner
