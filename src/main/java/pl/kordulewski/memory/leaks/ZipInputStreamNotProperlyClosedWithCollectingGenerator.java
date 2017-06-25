@@ -10,7 +10,7 @@ import java.util.zip.ZipInputStream;
 public class ZipInputStreamNotProperlyClosedWithCollectingGenerator {
 
     public void run() {
-        InputStream inputStream = ZipInputStreamNotProperlyClosedWithCollectingGenerator.class.getResourceAsStream("/ZipInputStreamTest.zip");
+        InputStream inputStream = ZipInputStreamNotProperlyClosedWithCollectingGenerator.class.getResourceAsStream(Constants.ZIP_FILENAME);
         while ( true ) {
             new ZipInputStream(inputStream);
             // ZipInputStream object is not properly closed

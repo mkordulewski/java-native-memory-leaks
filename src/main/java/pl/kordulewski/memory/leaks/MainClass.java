@@ -11,10 +11,8 @@ import java.io.InputStreamReader;
  */
 public class MainClass {
 
-    private static final String FILE_NAME = "/help.txt";
-
     public static void main(String... args) {
-        InputStream input = MainClass.class.getResourceAsStream(FILE_NAME);
+        InputStream input = MainClass.class.getResourceAsStream(Constants.HELP_FILENAME);
         String result = getStringFromInputStream(input);
         System.out.println(result);
         try {

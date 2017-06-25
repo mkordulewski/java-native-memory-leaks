@@ -11,7 +11,7 @@ import java.util.zip.ZipInputStream;
 public class ZipInputStreamNotProperlyClosedWithLitteringGenerator {
 
     public void run() {
-        InputStream inputStream = ZipInputStreamNotProperlyClosedWithLitteringGenerator.class.getResourceAsStream("/ZipInputStreamTest.zip");
+        InputStream inputStream = ZipInputStreamNotProperlyClosedWithLitteringGenerator.class.getResourceAsStream(Constants.ZIP_FILENAME);
         while ( true ) {
             new ZipInputStream(inputStream);
             // ZipInputStream object is not properly closed

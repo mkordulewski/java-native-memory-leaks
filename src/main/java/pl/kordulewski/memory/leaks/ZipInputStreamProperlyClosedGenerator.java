@@ -11,7 +11,7 @@ import java.util.zip.ZipInputStream;
 public class ZipInputStreamProperlyClosedGenerator {
 
     public void run() {
-        InputStream inputStream = ZipInputStreamProperlyClosedGenerator.class.getResourceAsStream("/ZipInputStreamTest.zip");
+        InputStream inputStream = ZipInputStreamProperlyClosedGenerator.class.getResourceAsStream(Constants.ZIP_FILENAME);
         while ( true ) {
             final ZipInputStream zipInputStream = new ZipInputStream(inputStream);
             try {
