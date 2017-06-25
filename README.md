@@ -178,6 +178,7 @@ G1 GC was called with flags:
 
 ## All java classes ready to run
 Class names are self-describing:
+
 | class                                               | safe?                                     | description                            |
 |:----------------------------------------------------|:------------------------------------------|:---------------------------------------|
 | InflaterProperlyEndedRunner                         | safe                                      | instance is properly ended             |
