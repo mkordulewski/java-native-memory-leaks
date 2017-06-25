@@ -62,11 +62,11 @@ java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 
 | Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 9 @ Windows | Java 8 @ Solaris |
 |:-------------------------------|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
-| Serial GC                      |                  |                  |                  |                  |                  |                  |                  |
-| Parallel GC                    |                  |                  |                  |                  |                  |                  |                  |
-| Old Parallel GC                |                  |                  |                  |                  |                  |                  |                  |
-| CMS (Concurrent Mark Sweep) GC |                  |                  |                  |                  |                  |                  |                  |
-| G1 (Garbage First) GC          |                  |                  |                  |                  |                  |                  |                  |
+| Serial GC                      |      no leak     |                  |                  |                  |                  |                  |                  |
+| Parallel GC                    |      no leak     |                  |                  |                  |                  |                  |                  |
+| Old Parallel GC                |      no leak     |                  |                  |                  |                  |                  |                  |
+| CMS (Concurrent Mark Sweep) GC |      no leak     |                  |                  |                  |                  |                  |                  |
+| G1 (Garbage First) GC          |      no leak     |                  |                  |                  |                  |                  |                  |
 
 ### Potential workaround: Objects intentionally litter Java heap
 It's usually safe workaround, no memory leak:
