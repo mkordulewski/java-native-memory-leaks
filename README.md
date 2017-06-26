@@ -98,11 +98,11 @@ java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 
 | Garbage Collector              |  Java 6 @ Linux  | Java 6 @ Windows |  Java 7 @ Linux  | Java 7 @ Windows |  Java 8 @ Linux  | Java 8 @ Windows | Java 8 @ Solaris |
 |:-------------------------------|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
-| Serial GC                      |      no leak     |      no leak     |      no leak     |                  |      no leak     |      no leak     |      no leak     |
-| Parallel GC                    |      no leak     |                  |      no leak     |                  |      no leak     |      no leak     |      no leak     |
-| Old Parallel GC                |      no leak     |                  |      no leak     |                  |      no leak     |      no leak     |      no leak     |
-| CMS (Concurrent Mark Sweep) GC |      no leak     |                  |      no leak     |                  |      no leak     |      no leak     |      no leak     |
-| G1 (Garbage First) GC          |      no leak     |                  |      no leak     |                  |      no leak     |      no leak     |      no leak     |
+| Serial GC                      |      no leak     |      no leak     |      no leak     |      no leak     |      no leak     |      no leak     |      no leak     |
+| Parallel GC                    |      no leak     |                  |      no leak     |      no leak     |      no leak     |      no leak     |      no leak     |
+| Old Parallel GC                |      no leak     |                  |      no leak     |      no leak     |      no leak     |      no leak     |      no leak     |
+| CMS (Concurrent Mark Sweep) GC |      no leak     |                  |      no leak     |      no leak     |      no leak     |      no leak     |      no leak     |
+| G1 (Garbage First) GC          |      no leak     |                  |      no leak     |      no leak     |      no leak     |      no leak     |      no leak     |
 
 
 
