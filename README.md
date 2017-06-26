@@ -218,13 +218,13 @@ Exception in thread "main" #
 
 
 ## Mapping different GCs to flags
-| Garbage Collector              |flag                     |
-|:-------------------------------|:------------------------|
-| Serial GC                      | -XX:+UseSerialGC        |
-| Parallel GC                    | -XX:+UseParallelGC      |
-| Old Parallel GC                | -XX:+UseParallelOldGC   |
-| CMS (Concurrent Mark Sweep) GC | -XX:+UseConcMarkSweepGC |
-| G1 (Garbage First) GC          | -XX:+UseG1GC            |
+| Garbage Collector              |flag                           |
+|:-------------------------------|:------------------------------|
+| Serial GC                      | ```-XX:+UseSerialGC```        |
+| Parallel GC                    | ```-XX:+UseParallelGC```      |
+| Old Parallel GC                | ```-XX:+UseParallelOldGC```   |
+| CMS (Concurrent Mark Sweep) GC | ```-XX:+UseConcMarkSweepGC``` |
+| G1 (Garbage First) GC          | ```-XX:+UseG1GC```            |
 
 G1 GC was called with flags:
 * HotSpot 6: ```-XX:+UseG1GC -XX:+UnlockExperimentalVMOptions```
