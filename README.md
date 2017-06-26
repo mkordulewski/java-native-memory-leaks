@@ -234,13 +234,13 @@ G1 GC was called with flags:
 ## All java classes ready to run
 Class names are self-describing:
 
-| class                                               | safe?                                     | description                            |
-|:----------------------------------------------------|:------------------------------------------|:---------------------------------------|
-| InflaterProperlyEndedRunner                         | safe                                      | instance is properly ended             |
-| InflaterNotProperlyEndedRunner                      | may cause leak                            | instance is _not_ properly ended       |
-| InflaterNotProperlyEndedWithCollectingRunner        | tested as a workaround - potentially safe | GC is called periodically              |
-| InflaterNotProperlyEndedWithLitteringRunner         | tested as a workaround - potentially safe | objects intentionally litter Java heap |
-| ZipInputStreamProperlyClosedRunner                  | safe                                      | instance is properly closed            |
-| ZipInputStreamNotProperlyClosedRunner               | may cause leak                            | instance is _not_ properly closed      |
-| ZipInputStreamNotProperlyClosedWithCollectingRunner | tested as a workaround - potentially safe | GC is called periodically              |
-| ZipInputStreamNotProperlyClosedWithLitteringRunner  | tested as a workaround - potentially safe | objects intentionally litter Java heap |
+| class                                                     | safe?                                     | description                            |
+|:----------------------------------------------------------|:------------------------------------------|:---------------------------------------|
+| ```InflaterProperlyEndedRunner```                         | safe                                      | instance is properly ended             |
+| ```InflaterNotProperlyEndedRunner```                      | may cause leak                            | instance is _not_ properly ended       |
+| ```InflaterNotProperlyEndedWithCollectingRunner```        | tested as a workaround - potentially safe | GC is called periodically              |
+| ```InflaterNotProperlyEndedWithLitteringRunner```         | tested as a workaround - potentially safe | objects intentionally litter Java heap |
+| ```ZipInputStreamProperlyClosedRunner```                  | safe                                      | instance is properly closed            |
+| ```ZipInputStreamNotProperlyClosedRunner```               | may cause leak                            | instance is _not_ properly closed      |
+| ```ZipInputStreamNotProperlyClosedWithCollectingRunner``` | tested as a workaround - potentially safe | GC is called periodically              |
+| ```ZipInputStreamNotProperlyClosedWithLitteringRunner```  | tested as a workaround - potentially safe | objects intentionally litter Java heap |
