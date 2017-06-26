@@ -183,8 +183,7 @@ java -XX:+UseG1GC            -cp memory-leaks.jar pl.kordulewski.memory.leaks.ru
 
 ### Alternative flags
 ```
-java -XX:+AggressiveHeap     -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedRunner
-java -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -cp memory-leaks.jar pl.kordulewski.memory.leaks.runners.InflaterNotProperlyEndedRunner
+-XX:+AggressiveHeap
 ```
 
 
